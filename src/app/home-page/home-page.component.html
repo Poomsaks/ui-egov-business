@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BCPH: Influenza Risk</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/logo_meditech_insights.png" rel="icon">
+  <link href="assets/logo_meditech_insights.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+      <div class="align-items-center d-none d-md-flex">
+        <i class="bi bi-clock"></i> วันที่ : {{ currentDate | date: 'dd MM yyyy HH:mm' }}
+
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-phone"></i> ติดต่อเรา: 086-2295093
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="logo me-auto"><img src="assets/logo_meditech_insights.png" alt=""></a>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" (click)="scrollToHero('1')">หน้าหลัก</a></li>
+          <li><a class="nav-link scrollto" (click)="scrollToHero('2')">เกี่ยวกับ</a></li>
+          <!-- <li><a class="nav-link scrollto" (click)="scrollToHero('3')">วินิจฉัยความเสี่ยง</a></li> -->
+          <li><a class="nav-link scrollto" (click)="scrollToHero('4')">ติดต่อเรา</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <!-- <div class="text-center"><button class="btn" (click)="goToadmin()">เข้าสู่ระบบ</button></div> -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+
+  <section #heroSection>
+    <div class="carousel-inner" role="listbox" style="margin-top: 60px;">
+      <!-- Slide 1 -->
+      <div>
+        <img src="assets/Artboard_1s.png" alt="รูปภาพ">
+      </div>
+    </div>
+
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+    <!--
+    <section id="cta" #heroCta class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>ระบบประเมินความเสี่ยงไข้หวัดใหญ่สายพันธ์ุใหม่</h3>
+          <p style="text-align: justify;">การวางแผนการจัดการและการตอบสนองด้วย AI
+            สามารถช่วยในการวางแผนการจัดการการระบาดโรค รวมถึงการตอบสนองด่วนเพื่อควบคุมการแพร่กระจายของโรคในสังคม
+            การใช้เทคโนโลยีปัญญาประดิษฐ์ในระบบประเมินความเสี่ยงของไข้หวัดใหญ่สายพันธ์ุใหม่ช่วยในการเพิ่มความเร็วและความมั่นใจในการตรวจสอบและจัดการโรคในสถานการณ์ฉุกเฉินและเป็นประสิทธิภาพ
+          </p>
+          <a class="cta-btn scrollto" href="appointment">เรียนรู้เพิ่มเติม...</a>
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" #heroAbout class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title" style="margin-top: 80px;">
+          <h2>การติดเชื้อไข้หวัดใหญ่</h2>
+          <p>การติดเชื้อไข้หวัดใหญ่จะคล้ายกับไข้หวัดทั่วไป คือ ติดต่อโดยการหายใจเอาละอองน้ำมูก น้ำลาย
+            และเสมหะของผู้ป่วยที่ไอหรือจาม และการสัมผัสมือหรือการใช้สิ่งของเครื่องใช้ต่าง ๆ ร่วมกับผู้ป่วย เช่น
+            ผ้าเช็ดตัว แก้วน้ำ โทรศัพท์ ของเล่น รีโมตโทรทัศน์ เมื่อใช้มือมาขยี้ตา แคะจมูก
+            เชื้อโรคก็จะเข้าสู่ร่างกายของเราได้โดยง่าย
+
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="assets/postersa.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>อาการไข้หวัดใหญ่</h3>
+            <p class="fst-italic">
+              โดยทั่วไปไข้หวัดใหญ่มักจะมีอาการที่รุนแรงมากกว่าไข้หวัดธรรมดา โดยสังเกตได้จากอากา
+              DEPARTMENTSรที่มักเกิดขึ้นทันทีทันใด ต่างจากไข้หวัดธรรมดามักจะมีอาการค่อยเป็นค่อยไป และที่สำคัญคือ
+              ไข้หวัดใหญ่มักมีไข้สูงติดกันหลายวัน โดยเฉพาะในเด็กจะมีไข้สูงลอยเกินกว่า 39 – 40 องศาเซลเซียสติดต่อกัน 3 –
+              4 วัน อาจมีอาการหนาวสั่นสะท้านร่วมด้วย ในขณะที่ไข้หวัดธรรมดาอาจมีไข้แต่ไม่สูงมากนัก
+              นอกจากนั้นเด็กโตและผู้ใหญ่มักมีอาการปวดเมื่อยกล้ามเนื้อ อ่อนเพลียอย่างมาก และเบื่ออาหารเป็นอาการสำคัญ
+
+              ความน่ากลัวของไข้หวัดใหญ่อย่างหนึ่งคือ การเกิดภาวะแทรกซ้อนของโรค ได้แก่ โรคปอดอักเสบ และโรคสมองอักเสบ
+              ซึ่งมักเกิดกับผู้ที่เป็นกลุ่มเสี่ยงคือ เด็กเล็ก ผู้สูงอายุ และผู้ที่มีโรคประจำตัวบางอย่าง เช่น โรคหัวใจ
+              โรคปอด โรคเบาหวาน โรคไต โรคเอดส์ ควรพบแพทย์ทันทีเมื่อทราบว่าเป็นไข้หวัดใหญ่
+            </p>
+            <h3>การดูแลรักษาไข้หวัดใหญ่</h3>
+            <p class="fst-italic">
+              การดูแลรักษาผู้ป่วยโรคไข้หวัดใหญ่ ส่วนใหญ่จะหายเอง หากมีอาการไม่มากอาจจะดูแลเองที่บ้านและรักษาตามอาการ
+              เช่น เมื่อมีไข้สูงให้ใช้ผ้าชุบน้ำเช็ดตัวและใช้ยาลดไข้พาราเซตามอล หลีกเลี่ยงการใช้ยากลุ่มแอสไพริน
+              หรือถ้ามีน้ำมูกให้ใช้ยาลดน้ำมูกและยาละลายเสมหะ ดื่มน้ำให้เพียงพอ รับประทานอาหารอ่อน ๆ และนอนพักมาก ๆ
+              ไม่ควรออกกำลังกาย
+
+              หากอาการไม่ดีขึ้นภายใน 3 วัน เช่น ไข้สูงมากจนเพ้อ ซึม หายใจหอบ หายใจลำบาก เจ็บแน่นหน้าอก หน้ามืด
+              มีอาการขาดน้ำและดื่มน้ำไม่เพียงพอ ควรรีบไปพบแพทย์ เพราะอาจมีภาวะแทรกซ้อนหรืออาจมีสาเหตุมาจากโรคอื่น ๆ
+            </p>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Appointment Section ======= -->
+
+
+    <!-- End Appointment Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <img src="assets/postersa.png" class="img-fluid" alt="">
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <img src="assets/postersa.png" class="img-fluid" alt="">
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <img src="assets/postersa.png" class="img-fluid" alt="">
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <img src="assets/postersa.png" class="img-fluid" alt="">
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <img src="assets/postersa.png" class="img-fluid" alt="">
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <img src="assets/postersa.png" class="img-fluid" alt="">
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" #heroHeroContact class="contact">
+      <div class="container">
+
+        <div class="section-title" style="margin-top: 50px;">
+          <h2>ติดต่อเรา</h2>
+          <p>โรงพยาบาลสมเด็จพระยุพราชบ้านดุง
+            ที่อยู่ 145 ม.7 ถ.บริบาลดำริ ต.ศรีสุทโธ อ.บ้านดุง จ.อุดรธานี 41190 <br>
+            Contact Info
+            โทร. 042273700-3
+            แฟกซ์ 042273704
+            อีเมล์ bcph11446@gmail.com
+          </p>
+        </div>
+
+      </div>
+
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.170132046023!2d102.76840577419756!3d17.594654196803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3123810051a4ddb1%3A0xd23762a82af9dfde!2sMeditech%20Insights!5e0!3m2!1sth!2sth!4v1702996503146!5m2!1sth!2sth"
+          width="100%;" height="350px;" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>BCPH Influenza Risk</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ -->
+        Designed by <a href="#">นักวิชาการคอมพิวเตอร์</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+</body>
+
+</html>
